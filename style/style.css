@@ -1,0 +1,57 @@
+:root{
+   --color-primary: rgb(52 211 153);
+}
+
+/* Style the active class */
+.active {
+   background-color: var(--color-primary);
+   color: #fff;
+}
+
+/* Splide js */
+.splide__arrow{
+   width: 2.4em;
+   height: 2.4em;
+   background: transparent;
+   border: 1px solid;
+   border-radius: 0;
+   opacity: 0.3;
+}
+.splide__arrow:hover:not(:disabled) {
+   background: var(--color-primary)!important;
+   border: transparent;
+   opacity: 1;
+}
+#top-bar-slide .splide__arrow--next {
+   left: 4em!important;
+}
+#top-bar-slide .splide__track {
+   top: 25%;
+   left: 8rem!important;
+}
+#top-bar-slide .splide__slide p{
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+}
+.popular-news-p{
+   overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box !important;
+   -webkit-line-clamp: 3;
+   -webkit-box-orient: vertical;
+   white-space: normal;
+}
+
+.card, .card.image-full:before{
+   border-radius: 0!important;
+}
+.card.image-full:before{
+   opacity: 0.5;
+}
+.card-banner{
+   height: 470px;
+}
+.card-featured{
+   height: 350px;
+}

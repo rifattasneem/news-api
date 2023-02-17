@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="https://cdn.tailwindcss.com"></script>
+   <link href="https://cdn.jsdelivr.net/npm/daisyui@2.31.0/dist/full.css" rel="stylesheet" type="text/css" />
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/css/splide.min.css">
+
+   <!-- fonts -->
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+   <link rel="stylesheet" href="style/style.css">
+   
+   <title>News</title>
+</head>
+<body class="bg-gray-100">
+
+   <div class="navbar bg-base-100 sm:px-5 py-0 min-h-0">
+      <div class="container mx-auto sm:px-5 py-0">
+         <div class="flex flex-1">
+            <p class="py-3 px-4 bg-emerald-400 text-white inline-block !rounded-none">Trending</p>
+            <div id="top-bar-slide" class="splide" role="group" aria-label="Top bar slide">
+               <div class="splide__track">
+                  <ul class="splide__list w-20 sm:w-96">
+                     <li class="splide__slide"><p>Slide 01fhdfshfuisgfsabfjsbhsg Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta dolores voluptatum nulla commodi perferendis odio accusamus, dolor corporis accusantium doloribus totam, vel distinctio cumque, provident nam recusandae earum sit? Vero!</p></li>
+                     <li class="splide__slide"><p>Slide 02</p></li>
+                     <li class="splide__slide"><p>Slide 03</p></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <div class="hidden lg:flex flex-none">
+            <p id="date"></p>
+         </div>
+      </div> 
+   </div>
+   <!-- Navbar -->
+   <div class="container mx-auto sm:px-5">
+      <div class="navbar sm:p-5">
+         <div class="flex-none">
+            <a class="normal-case text-4xl font-bold"><span class="text-emerald-400">NEWS</span>ROOM</a>
+         </div>
+      </div> 
+   </div>
+   <header class="navbar bg-base-100 sm:px-5 py-0 min-h-0">
+      <div class="container mx-auto flex justify-between sm:px-5 py-0">
+         <div class="navbar-start lg:hidden">
+            <div class="dropdown">
+               <label tabindex="0" class="btn btn-ghost lg:hidden p-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+               </label>
+               <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                  <li class="menu-link hover:text-white"><a class="hover:bg-emerald-400 !rounded-none">Home</a></li>
+                  <li class="menu-link hover:text-white"><a class="hover:bg-emerald-400 !rounded-none">Categories</a></li>
+                  <li class="menu-link hover:text-white"><a class="hover:bg-emerald-400 !rounded-none">Single News</a></li>
+                  <li><a class="hover:bg-emerald-400 hover:text-white !rounded-none">
+                     Dropdown
+                     <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
+                     </a>
+                     <ul class="p-2 bg-base-100 border-slate-200 z-50">
+                        <li class="menu-link"><a class="hover:bg-emerald-400 hover:text-white !rounded-none">Submenu 1</a></li>
+                        <li class="menu-link"><a class="hover:bg-emerald-400 hover:text-white !rounded-none">Submenu 2</a></li>
+                     </ul>
+                  </li>
+                  <li class="menu-link hover:text-white"><a class="hover:bg-emerald-400 !rounded-none">Contact</a></li>
+               </ul>
+            </div>         
+         </div>
+         <div class="hidden lg:flex">
+            <ul id="menu" class="menu menu-horizontal p-0">
+               <li class="menu-link hover:text-white active"><a class="hover:bg-emerald-400 !rounded-none">Home</a></li>
+               <li class="menu-link hover:text-white"><a class="hover:bg-emerald-400 !rounded-none">Categories</a></li>
+               <li class="menu-link hover:text-white"><a class="hover:bg-emerald-400 !rounded-none">Single News</a></li>
+               <li><a class="hover:bg-emerald-400 hover:text-white !rounded-none">
+                  Dropdown
+                  <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
+                  </a>
+                  <ul class="p-2 bg-base-100 border-slate-200 z-50">
+                     <li class="menu-link"><a class="hover:bg-emerald-400 hover:text-white !rounded-none">Submenu 1</a></li>
+                     <li class="menu-link"><a class="hover:bg-emerald-400 hover:text-white !rounded-none">Submenu 2</a></li>
+                  </ul>
+               </li>
+               <li class="menu-link hover:text-white"><a class="hover:bg-emerald-400 !rounded-none">Contact</a></li>
+            </ul>
+         </div>
+         <div class="navbar-end w-auto">
+            <div class="form-control flex flex-row">
+               <input type="text" placeholder="Search" class="input input-bordered flex-1 h-9 !rounded-none w-1/4" />
+               <a class="btn h-9 min-h-0 hover:bg-emerald-400 hover:text-white !rounded-none">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+               </a>
+            </div>
+         </div>
+      </div>
+   </header>
+   <!-- Navbar -->
+
+   <section class="banner-top md:px-10 py-8">
+      <div class="container mx-auto px-8 py-0">
+         <div id="banner-top-splide" class="splide" role="group" aria-label="Banner top slide">
+            <div class="splide__track">
+               <ul class="splide__list">
+                  <li class="splide__slide mr-8">
+                     <div class="card card-side bg-base-100 shadow-xl">
+                        <figure><img src="https://placeimg.com/200/280/arch" class="w-20 h-20 lg:w-24 lg:h-24" alt="Movie"/></figure>
+                        <div class="card-body p-4 lg:p-3">
+                           <p>Click the button to watch on Jetflix app.</p>
+                        </div>
+                     </div>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div> 
+   </section>
+
+   <section class="banner md:px-10 pb-8">
+      <div class="container mx-auto px-8 py-0 xl:flex">
+         <div id="banner-splide" class="splide flex-auto xl:w-2/3" role="group" aria-label="Banner slide">
+            <div class="splide__track">
+               <ul class="splide__list">
+                  <li class="splide__slide">
+                     <div class="card image-full card-banner">
+                        <figure><img src="https://cdn.pixabay.com/photo/2018/08/14/13/23/ocean-3605547_960_720.jpg" class="w-full" alt="Shoes"/></figure>
+                        <div class="card-body card-banner">
+                           <div class="absolute bottom-11">
+                              <p class="mb-3">If a dog chews shoes whose shoes does he choose?</p>
+                              <h2 class="text-4xl font-bold">Shoes!</h2>
+                           </div>
+                        </div>
+                      </div>
+                  </li>
+                  <li class="splide__slide">
+                     <div class="card image-full card-banner">
+                        <figure><img src="https://cdn.pixabay.com/photo/2016/10/21/14/50/plouzane-1758197_960_720.jpg" class="w-full" alt="Shoes"/></figure>
+                        <div class="card-body card-banner">
+                           <div class="absolute bottom-11">
+                              <p class="mb-3">If a dog chews shoes whose shoes does he choose?</p>
+                              <h2 class="text-4xl font-bold">Shoes!</h2>
+                           </div>
+                        </div>
+                     </div>
+                  </li>
+               </ul>
+            </div>
+         </div>
+         <div class="catagory my-5 xl:my-0 flex-auto xl:w-1/3 xl:ml-8" role="group">
+            <div class="flex justify-between align-center bg-base-100 p-4 mb-5">
+               <h2 class="text-3xl font-bold font-white">Catagories</h2>
+               <a href="#" class="text-xl leading-8 text-slate-500 mb-0 font-semibold">View All</a>
+            </div>
+            <ul class="">
+               <li class="mb-5">
+                  <div class="card image-full h-20">
+                     <figure><img src="https://placeimg.com/400/225/arch" class="w-full" alt="Shoes"/></figure>
+                     <div class="card-body p-5">
+                        <h2 class="text-2xl font-semibold text-center">Business</h2>
+                     </div>
+                  </div>
+               </li>
+               <li class="mb-5">
+                  <div class="card image-full h-20">
+                     <figure><img src="https://placeimg.com/400/225/arch" class="w-full" alt="Shoes"/></figure>
+                     <div class="card-body p-5">
+                        <h2 class="text-2xl font-semibold text-center">Technology</h2>
+                     </div>
+                  </div>
+               </li>
+               <li class="mb-5">
+                  <div class="card image-full h-20">
+                     <figure><img src="https://placeimg.com/400/225/arch" class="w-full" alt="Shoes"/></figure>
+                     <div class="card-body p-5">
+                        <h2 class="text-2xl font-semibold text-center">Entertainment</h2>
+                     </div>
+                  </div>
+               </li>
+               <li class="">
+                  <div class="card image-full h-20">
+                     <figure><img src="https://placeimg.com/400/225/arch" class="w-full" alt="Shoes"/></figure>
+                     <div class="card-body p-5">
+                        <h2 class="text-2xl font-semibold text-center">Sports</h2>
+                     </div>
+                  </div>
+               </li>
+            </ul>
+         </div>
+      </div> 
+   </section>
+
+   <section class="featured md:px-10 pb-8">
+      <div class="container mx-auto px-8 py-0">
+         <div class="flex justify-between align-center bg-base-100 p-4 mb-5">
+            <h2 class="text-3xl font-bold font-white">Featured</h2>
+            <a href="#" class="text-xl leading-8 text-slate-500 mb-0 font-semibold">View All</a>
+         </div>
+         <div id="featured-splide" class="splide flex-auto" role="group" aria-label="Featured slide">
+            <div class="splide__track">
+               <ul class="splide__list">
+                  <li class="splide__slide mr-8">
+                     <div class="card image-full card-featured">
+                        <figure><img src="https://cdn.pixabay.com/photo/2018/08/14/13/23/ocean-3605547_960_720.jpg" class="w-full" alt="Shoes"/></figure>
+                        <div class="card-body">
+                           <div class="absolute bottom-11">
+                              <p class="mb-3">If a dog chews shoes whose shoes does he choose?</p>
+                              <h2 class="text-2xl font-semibold">Shoes!</h2>
+                           </div>
+                        </div>
+                     </div>
+                  </li>
+                  <li class="splide__slide mr-8">
+                     <div class="card image-full card-featured">
+                        <figure><img src="https://cdn.pixabay.com/photo/2016/10/21/14/50/plouzane-1758197_960_720.jpg" class="w-full" alt="Shoes"/></figure>
+                        <div class="card-body">
+                           <div class="absolute bottom-11">
+                              <p class="mb-3">If a dog chews shoes whose shoes does he choose?</p>
+                              <h2 class="text-2xl font-semibold">Shoes!</h2>
+                           </div>
+                        </div>
+                     </div>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section class="others md:px-10 pb-8">
+      <div class="container mx-auto px-8 py-0 xl:flex">
+         <div class="business my-5 xl:my-0 flex-auto xl:w-1/2 xl:pr-4" role="group">
+            <div class="flex justify-between align-center bg-base-100 p-4 mb-5">
+               <h2 class="text-3xl font-bold font-white">Business</h2>
+            </div>
+            <div id="business-splide" class="splide flex-auto" role="group" aria-label="Business slide">
+               <div class="splide__track">
+                  <ul class="splide__list">
+                     <li class="splide__slide mr-8">
+                        <div class="card bg-base-100 shadow-xl">
+                           <figure><img src="https://placeimg.com/400/225/arch" class="w-full" alt="Shoes" /></figure>
+                           <div class="card-body">
+                              <p>If a dog chews shoes whose shoes does he choose?</p>
+                              <h2 class="text-2xl font-semibold">Shoes!</h2>
+                           </div>
+                        </div>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <div class="technology xl:my-0 flex-auto xl:w-1/2 xl:pl-4" role="group">
+            <div class="flex justify-between align-center bg-base-100 p-4 mb-5">
+               <h2 class="text-3xl font-bold font-white">Technology</h2>
+            </div>
+            <div id="technology-splide" class="splide flex-auto" role="group" aria-label="Technology slide">
+               <div class="splide__track">
+                  <ul class="splide__list">
+                     <li class="splide__slide mr-8">
+                        <div class="card bg-base-100 shadow-xl">
+                           <figure><img src="https://placeimg.com/400/225/arch" class="w-full" alt="Shoes" /></figure>
+                           <div class="card-body">
+                              <p>If a dog chews shoes whose shoes does he choose?</p>
+                              <h2 class="text-2xl font-semibold">Shoes!</h2>
+                           </div>
+                        </div>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section class="social md:px-10 pb-8">
+      <div class="container mx-auto px-8 py-0 xl:flex">
+         <div class="popular my-5 xl:my-0 flex-auto xl:w-2/3 pb-8" role="group">
+            <div class="flex justify-between align-center bg-base-100 p-4 mb-5">
+               <h2 class="text-3xl font-bold font-white">Popular</h2>
+               <a href="#" class="text-xl leading-8 text-slate-500 mb-0 font-semibold">View All</a>
+            </div>
+            <div class="md:flex justify-between align-center">
+               <div class="card bg-base-100 md:w-1/2 md:mr-8 mb-5 md:mb-0">
+                  <figure><img src="https://placeimg.com/400/225/arch" class="w-full" alt="Shoes" /></figure>
+                  <div class="card-body">
+                     <p>If a dog chews shoes whose shoes does he choose?</p>
+                     <h2 class="text-2xl font-semibold">Shoes!</h2>
+                     <p class="popular-news-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio molestiae velit sit reiciendis repellendus, quia perferendis repudiandae, quidem id qui nobis facere rerum assumenda eveniet! Dolorum at rem quia possimus.</p>
+                  </div>
+               </div>
+               <div class="card bg-base-100 md:w-1/2">
+                  <figure><img src="https://placeimg.com/400/225/arch" class="w-full" alt="Shoes" /></figure>
+                  <div class="card-body">
+                     <p>If a dog chews shoes whose shoes does he choose?</p>
+                     <h2 class="text-2xl font-semibold">Shoes!</h2>
+                     <p class="popular-news-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio molestiae velit sit reiciendis repellendus, quia perferendis repudiandae, quidem id qui nobis facere rerum assumenda eveniet! Dolorum at rem quia possimus.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="newsletter-social my-5 xl:my-0 flex-auto xl:w-1/3 xl:ml-8" role="group">
+            <div class="flex justify-between align-center bg-base-100 p-4 mb-5">
+               <h2 class="text-3xl font-bold font-white">Follow Us</h2>
+            </div>
+            <div class="grid grid-cols-2 align-center gap-4 mb-5">
+               <button class="btn capitalize rounded-none bg-blue-900 border-none">
+                  <i class="fab fa-facebook-f pt-0.5 pr-1"></i>
+                  12,345 Fans
+               </button>
+               <button class="btn capitalize rounded-none bg-sky-500 border-none">
+                  <i class="fab fa-twitter pt-0.5 pr-1"></i>
+                  12,345 Followers
+               </button>
+               <button class="btn capitalize rounded-none bg-cyan-600 border-none">
+                  <i class="fab fa-linkedin-in pt-0.5 pr-1"></i>
+                  12,345 Connects
+               </button>
+               <button class="btn capitalize rounded-none bg-pink-600 border-none">
+                  <i class="fab fa-instagram pt-0.5 pr-1"></i>
+                  12,345 Followers
+               </button>
+               <button class="btn capitalize rounded-none bg-rose-600 border-none">
+                  <i class="fab fa-youtube pt-0.5 pr-1"></i>
+                  12,345 Subscribers
+               </button>
+               <button class="btn capitalize rounded-none bg-sky-400 border-none">
+                  <i class="fab fa-vimeo-v pt-0.5 pr-1"></i>
+                  12,345 Followers
+               </button>
+            </div>
+            <div class="flex justify-between align-center bg-base-100 p-4 mb-5">
+               <h2 class="text-3xl font-bold font-white">Newsletter</h2>
+            </div>
+            <div class="card bg-base-100 p-7">
+               <p class="text-center mb-5">Sign up to the newsletter for receiving important updates & news!</p>
+               <div class="form-control flex sm:flex-row">
+                  <input type="text" placeholder="Your Mail" class="input input-bordered sm:flex-1 !rounded-none" />
+                  <button class="btn capitalize rounded-none bg-emerald-400 border-none">Sign Up</button>
+               </div>
+            </div>
+         </div>
+      </div> 
+   </section>
+
+   <section class="footer-top bg-base-100 px-3 md:px-10 pt-10">
+      <div class="container mx-auto sm:px-5 py-0 grid md:grid-cols-2 xl:grid-cols-4 gap-2 xl:gap-5">
+         <div class="pb-10">
+            <a class="normal-case text-4xl font-bold"><span class="text-emerald-400">NEWS</span>ROOM</a>
+            <p class="py-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit illum placeat nihil sit quod iusto.</p>
+            <div class="flex justify-between xl:w-4/5 w-1/3 gap-2">
+               <button class="btn btn-outline text-slate-600 hover:text-white hover:bg-slate-600 hover:border-slate-600 w-11 px-3 rounded-none">
+                  <i class="fab fa-twitter text-lg"></i>
+               </button>
+               <button class="btn btn-outline text-slate-600 hover:text-white hover:bg-slate-600 hover:border-slate-600 w-11 px-3 rounded-none">
+                  <i class="fab fa-facebook-f text-lg"></i>
+               </button>
+               <button class="btn btn-outline text-slate-600 hover:text-white hover:bg-slate-600 hover:border-slate-600 w-11 px-3 rounded-none">
+                  <i class="fab fa-linkedin-in text-lg"></i>
+               </button>
+               <button class="btn btn-outline text-slate-600 hover:text-white hover:bg-slate-600 hover:border-slate-600 w-11 px-3 rounded-none">
+                  <i class="fab fa-instagram text-lg"></i>
+               </button>
+               <button class="btn btn-outline text-slate-600 hover:text-white hover:bg-slate-600 hover:border-slate-600 w-11 px-3 rounded-none">
+                  <i class="fab fa-youtube text-lg"></i>
+               </button>
+            </div>
+         </div>
+         <div class="pb-10">
+            <a class="text-2xl font-bold">Categories</a>
+            <div class="flex flex-wrap gap-2 pt-5">
+               <button class="btn btn-outline font-normal capitalize rounded-none text-slate-600 h-fit min-h-0 p-3 hover:text-white hover:bg-slate-600 hover:border-slate-600">
+                  <p>Politics</p>
+               </button>
+               <button class="btn btn-outline font-normal capitalize rounded-none text-slate-600 h-fit min-h-0 p-3 hover:text-white hover:bg-slate-600 hover:border-slate-600">
+                  <p>Business</p>
+               </button>
+               <button class="btn btn-outline font-normal capitalize rounded-none text-slate-600 h-fit min-h-0 p-3 hover:text-white hover:bg-slate-600 hover:border-slate-600">
+                  <p>Corporate</p>
+               </button>
+               <button class="btn btn-outline font-normal capitalize rounded-none text-slate-600 h-fit min-h-0 p-3 hover:text-white hover:bg-slate-600 hover:border-slate-600">
+                  <p>Sports</p>
+               </button>
+               <button class="btn btn-outline font-normal capitalize rounded-none text-slate-600 h-fit min-h-0 p-3 hover:text-white hover:bg-slate-600 hover:border-slate-600">
+                  <p>Health</p>
+               </button>
+               <button class="btn btn-outline font-normal capitalize rounded-none text-slate-600 h-fit min-h-0 p-3 hover:text-white hover:bg-slate-600 hover:border-slate-600">
+                  <p>Education</p>
+               </button>
+               <button class="btn btn-outline font-normal capitalize rounded-none text-slate-600 h-fit min-h-0 p-3 hover:text-white hover:bg-slate-600 hover:border-slate-600">
+                  <p>Science</p>
+               </button>
+            </div>
+         </div>
+         <div class="pb-10">
+            <a class="text-2xl font-bold">Tags</a>
+            <div class="flex flex-wrap gap-2 pt-5">
+               <button class="btn btn-outline font-normal capitalize rounded-none text-slate-600 h-fit min-h-0 p-3 hover:text-white hover:bg-slate-600 hover:border-slate-600">
+                  <p>Politics</p>
+               </button>
+               <button class="btn btn-outline font-normal capitalize rounded-none text-slate-600 h-fit min-h-0 p-3 hover:text-white hover:bg-slate-600 hover:border-slate-600">
+                  <p>Business</p>
+               </button>
+               <button class="btn btn-outline font-normal capitalize rounded-none text-slate-600 h-fit min-h-0 p-3 hover:text-white hover:bg-slate-600 hover:border-slate-600">
+                  <p>Corporate</p>
+               </button>
+               <button class="btn btn-outline font-normal capitalize rounded-none text-slate-600 h-fit min-h-0 p-3 hover:text-white hover:bg-slate-600 hover:border-slate-600">
+                  <p>Sports</p>
+               </button>
+               <button class="btn btn-outline font-normal capitalize rounded-none text-slate-600 h-fit min-h-0 p-3 hover:text-white hover:bg-slate-600 hover:border-slate-600">
+                  <p>Health</p>
+               </button>
+               <button class="btn btn-outline font-normal capitalize rounded-none text-slate-600 h-fit min-h-0 p-3 hover:text-white hover:bg-slate-600 hover:border-slate-600">
+                  <p>Education</p>
+               </button>
+               <button class="btn btn-outline font-normal capitalize rounded-none text-slate-600 h-fit min-h-0 p-3 hover:text-white hover:bg-slate-600 hover:border-slate-600">
+                  <p>Science</p>
+               </button>
+            </div>
+         </div>
+         <div class="pb-10">
+            <a class="text-2xl font-bold">Quick Links</a>
+            <ul class="list-inside list-none pt-5 leading-loose">
+               <li><a href="#">About</a></li>
+               <li><a href="#">Advertise</a></li>
+               <li><a href="#">Privacy Policy</a></li>
+               <li><a href="#">Terms & Conditions</a></li>
+               <li><a href="#">Contact</a></li>
+            </ul>
+         </div>
+      </div> 
+   </section>
+
+   <footer class="px-3 md:px-10 py-5">
+      <div class="container mx-auto sm:px-5 py-0">
+         <p class="text-center">© <a href="#">NewsRoom</a>. All rights reserved.</p>
+      </div> 
+   </footer>
+
+   <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/js/splide.min.js"></script> 
+
+   <script src="js/app.js"></script>
+   <script src="js/script.js"></script>
+   <script src="js/custom-splide.js"></script>
+   
+</body>
+</html>
